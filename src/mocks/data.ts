@@ -71,5 +71,39 @@ export const data = {
         text: "A small river named Duden flows by their place and supplies it with the necessary regelialia."
       }
     ], 
+  },
+  blog: {
+    title: "Read Our Blog",
+    desc: "Far far way, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    posts: [
+      {
+        id: 1,
+        blogImage: 'assets/blog_image_1.svg',
+        userImage: 'assets/user1.svg',
+        title: "Quick-start guide to nuts and seeds",
+        name: "Kevin Ibrahim",
+      },
+      {
+        id: 2,
+        blogImage: 'assets/blog_image_2.svg',
+        userImage: 'assets/user2.svg',
+        title: "Nutrition: Tips for Improving Your Health",
+        name: "Mike Jackson",
+      },
+      {
+        id: 3,
+        blogImage: 'assets/blog_image_3.svg',
+        userImage: 'assets/user3.svg',
+        title: "The top 10 benefits of eating healthy",
+        name: "Bryan McGregor",
+      },
+      {
+        id: 4,
+        blogImage: 'assets/blog_image_4.svg',
+        userImage: 'assets/user4.svg',
+        title: "What Makes a Healthy Diet",
+        name: "Jashua",
+      },
+    ]
   }
 }
