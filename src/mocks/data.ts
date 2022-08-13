@@ -105,5 +105,10 @@ export const data = {
         name: "Jashua",
       },
     ]
+  },
+  join: {
+    title: "Join our membership to get special offer",
+    placeholder: "Enter your email address",
+    button: "Join",
   }
 }

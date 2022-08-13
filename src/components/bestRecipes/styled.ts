@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FlexBox, TextHealthy } from "../../styles/mixins";
+import { FlexBox, TextHealthy } from "@/styles/mixins";
 
 export const BestRecipesFull = styled.div`
   background: var(--grey-1);
