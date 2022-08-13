@@ -1,14 +1,9 @@
 import styled from 'styled-components'
 import { FiSearch } from 'react-icons/fi'
-import { FlexBox, TextHealthy } from '@/styles/mixins'
+import { BG, FlexBox, TextHealthy } from '@/styles/mixins'
 
 export const NewRecipeFull = styled.div`
-  position: relative;
-  background: url("assets/Illustration.svg") no-repeat;
-  background-position: top right;
-  background-size: contain;
-  transition: 0.4s;
-  height: 40rem;
+  ${BG('assets/Illustration.svg', 'no-repeat', 'top right', 'contain', '40rem', 'relative')}
 
   @media (min-width: 1500px) and (max-width: 1919px) {
     height: 50rem;

@@ -52,3 +52,20 @@ export const Position = (
   right: ${right};
   bottom: ${bottom};
 `
+
+// BG('assets/imagem.svg', 'no-repeat', 'top left', 'contain', '45rem', 'relative')
+export const BG = (
+  url?: string | undefined,
+  repeat?: string | undefined,
+  bgPosition?: string | undefined,
+  size?: string | undefined,
+  height?: string | undefined,
+  position?: string | undefined,
+) => css`
+  background: url(${url});
+  background-repeat: ${repeat};
+  background-position: ${bgPosition};
+  background-size: ${size};
+  height: ${height};
+  position: ${position};
+`
