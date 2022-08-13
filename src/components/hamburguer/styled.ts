@@ -5,7 +5,7 @@ import styled from 'styled-components'
 export const Bullet = styled.div``
 
 export const Burguer = styled.div<IStyledHeader>`
-  ${Position('fixed', '1.5rem', '', '1.5rem', '')}
+  ${Position('fixed', '1.5rem', '1.5rem', '', '')}
   width: 2rem;
   height: 2rem;
   z-index: 20;

@@ -1,14 +1,18 @@
+import { data } from '@/mocks/data'
 import * as C from './styled'
 
 export const NewRecipe = () => {
+
+  const { newRecipe } = data
+
   return (
     <C.NewRecipeFull>
       <C.NewRecipeContainer>
         <C.NewRecipeContent>
           <C.Div>
-            <C.Title>Ready for Trying a new recipe?</C.Title>
+            <C.Title>{newRecipe.title}</C.Title>
             <C.DivInputButton>
-              <C.Input placeholder='Search healthy recipes' />
+              <C.Input placeholder={newRecipe.placeholder} />
               <C.Button>
                 <C.Icon />
               </C.Button>
