@@ -5,11 +5,12 @@ import * as C from './styled'
 import { useHealthyFood } from 'src/context'
 
 export const Header = () => {
-  const { open, setOpen } = useHealthyFood()
   const [scroll, setScroll] = useState<boolean>(false)
+  const { open, setOpen } = useHealthyFood()
+  const { header } = data
 
   const handleScroll = useCallback(() => {
-    setScroll(window.scrollY > 100)
+    setScroll(window.scrollY > 90)
   }, [])
 
   useEffect(() => {
@@ -23,12 +24,12 @@ export const Header = () => {
     <C.HeaderFull scroll={scroll}>
       <C.HeaderContainer>
         <C.Anchor onClick={() => setOpen(false)} to='root' spy smooth>
-          <C.HealthyLogo scroll={scroll} open={open}>Healthy Food</C.HealthyLogo>
+          <C.HealthyLogo scroll={scroll} open={open}>{header.logo}</C.HealthyLogo>
         </C.Anchor>
         <C.Nav>
           <C.UnlistContent open={open}>
             <C.UnList>
-              {data.header.map(({ id, go, title }) => (
+              {header.menu.map(({ id, go, title }) => (
                 <C.List key={id}>
                   <C.Anchor onClick={() => setOpen(!open)} to={go} spy smooth>
                     {title}
@@ -37,7 +38,7 @@ export const Header = () => {
               ))}
               <C.List>
                 <C.Anchor to='/register'>
-                  <C.RegisterAnchor>REGISTER</C.RegisterAnchor>
+                  <C.RegisterAnchor>{header.register}</C.RegisterAnchor>
                 </C.Anchor>
               </C.List>
             </C.UnList>
