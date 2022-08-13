@@ -6,8 +6,12 @@ import { useHealthyFood } from 'src/context'
 
 export const Header = () => {
   const [scroll, setScroll] = useState<boolean>(false)
-  const { open, setOpen } = useHealthyFood()
+  const { option, setOption } = useHealthyFood()
   const { header } = data
+
+  const handleRegister = () => {
+    setOption({...option, menu: false, modal: true})
+  }
 
   const handleScroll = useCallback(() => {
     setScroll(window.scrollY > 90)
@@ -23,23 +27,21 @@ export const Header = () => {
   return (
     <C.HeaderFull scroll={scroll}>
       <C.HeaderContainer>
-        <C.Anchor onClick={() => setOpen(false)} to='root' spy smooth>
-          <C.HealthyLogo scroll={scroll} open={open}>{header.logo}</C.HealthyLogo>
+        <C.Anchor onClick={() => setOption({...option, menu: false})} to='root' spy smooth>
+          <C.HealthyLogo scroll={scroll} open={option.menu}>{header.logo}</C.HealthyLogo>
         </C.Anchor>
         <C.Nav>
-          <C.UnlistContent open={open}>
+          <C.UnlistContent open={option.menu}>
             <C.UnList>
               {header.menu.map(({ id, go, title }) => (
                 <C.List key={id}>
-                  <C.Anchor onClick={() => setOpen(!open)} to={go} spy smooth>
+                  <C.Anchor onClick={() => setOption({...option, menu: !option.menu})} to={go} spy smooth>
                     {title}
                   </C.Anchor>
                 </C.List>
               ))}
               <C.List>
-                <C.Anchor to='/register'>
-                  <C.RegisterAnchor>{header.register}</C.RegisterAnchor>
-                </C.Anchor>
+                <C.RegisterAnchor onClick={handleRegister}>{header.register}</C.RegisterAnchor>
               </C.List>
             </C.UnList>
           </C.UnlistContent>
