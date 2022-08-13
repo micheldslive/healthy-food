@@ -9,10 +9,9 @@ export interface IHealthyFoodContext {
   setOption: React.Dispatch<React.SetStateAction<IModalRegister>>
 }
 export interface IModalRegister {
-  data: IRegister
   menu: boolean
   modal: boolean
-  loading: boolean
+  data: IRegister
 }
 
 export interface IStyledHeader {

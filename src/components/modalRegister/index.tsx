@@ -7,23 +7,26 @@ import InputMask from "react-input-mask"
 import { useHealthyFood } from "@/context"
 import { IRegister } from "@/core/types"
 import { HealthyFoodAPI } from "@/core/api/Api"
+import { useState } from "react"
 
 Modal.setAppElement("#root")
 
 export function ModalRegister() {
+  const [loading, setLoading] = useState<boolean>(false)
   const { option, setOption } = useHealthyFood()
   const { register, handleSubmit, setValue, reset } = useForm()
 
   const onSubmit = async (data: IRegister) => {
     try {
-      setOption({ ...option, loading: true })
+      setLoading(true)
       await localStorage.setItem(`healthyFood_${data.cpf}`,JSON.stringify(data))
-      document.cookie = `healthyFood_${data.cpf}=${JSON.stringify(data.cpf)}`
-      setOption({ ...option, data })
+      document.cookie = `healthyFood_${data.cpf}=${JSON.stringify(data)}`
+      setOption({ ...option, data: data })
 
       const timer = setTimeout(() => {
-        toast.success("User ${formData.name} registered successfully")
-        setOption({ ...option, modal: false, loading: false })
+        toast.success(`User ${data.name} registered successfully`)
+        setOption({ ...option, modal: false })
+        setLoading(false)
         reset()
       }, 2000)
       return () => clearTimeout(timer)
@@ -47,6 +50,7 @@ export function ModalRegister() {
       setValue("bairro", bairro)
       setValue("localidade", localidade)
       setValue("uf", response.uf)
+
     } catch (error) {
       console.error(error)
     }
@@ -152,8 +156,8 @@ export function ModalRegister() {
           />
         </div>
 
-        <button type="submit" disabled={option.loading}>
-          {option.loading ? <IconSpin /> : ""}
+        <button type="submit" disabled={loading}>
+          {loading? <IconSpin /> : ""}
           Register
         </button>
       </Form>
