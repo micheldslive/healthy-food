@@ -36,3 +36,7 @@ export interface ISlickProps {
 export interface IRegister {
   [key: string]: string
 }
+
+export interface IErrorHandler {
+  errorHandler(promise: Promise<unknown>): Promise<unknown>
+}
