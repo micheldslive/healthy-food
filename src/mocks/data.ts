@@ -54,4 +54,22 @@ export const data = {
       },
     ],
   },
+  serve: {
+    title: "The best services ready To serve you",
+    more: "Know More",
+    items: [
+      {
+        id: 1,
+        text: "Far far away, behind the word moutains, faar from the countries Vakalia and Consonantia, there live the blind texts.",
+      },
+      {
+        id: 2,
+        text: "Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.",
+      },
+      {
+        id: 3,
+        text: "A small river named Duden flows by their place and supplies it with the necessary regelialia."
+      }
+    ], 
+  }
 }
