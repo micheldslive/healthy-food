@@ -5,8 +5,14 @@ export interface IChildren {
 }
 
 export interface IHealthyFoodContext {
-  open: boolean
-  setOpen: React.Dispatch<React.SetStateAction<boolean>>
+  option: IModalRegister
+  setOption: React.Dispatch<React.SetStateAction<IModalRegister>>
+}
+export interface IModalRegister {
+  data: IRegister
+  menu: boolean
+  modal: boolean
+  loading: boolean
 }
 
 export interface IStyledHeader {
@@ -25,4 +31,12 @@ export interface ISlickProps {
   style: {
     [key: string]: React.CSSProperties
   }
+}
+
+export interface IRegister {
+  [key: string]: string
+}
+
+export interface IErrorHandler {
+  errorHandler(promise: Promise<unknown>): Promise<unknown>
 }

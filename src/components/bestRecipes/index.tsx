@@ -1,8 +1,9 @@
-import { data } from "@/mocks/data";
-import * as C from "./styled";
+import { data } from "@/mocks/data"
+import { memo } from "react"
+import * as C from "./styled"
 
 
-export const BestRecipes = () => {
+const BestRecipes = () => {
 
   const { recipes } = data
 
@@ -34,5 +35,7 @@ export const BestRecipes = () => {
         </C.BestRecipesContent>
       </C.BestRecipesContainer>
     </C.BestRecipesFull>
-  );
-};
+  )
+}
+
+export default memo(BestRecipes)

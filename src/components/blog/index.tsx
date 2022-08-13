@@ -1,8 +1,9 @@
-import { BlogCarousel } from "@/components/blogCarousel";
-import { data } from "@/mocks/data";
-import * as C from "./styled";
+import { memo } from "react"
+import { BlogCarousel } from "@/components/blogCarousel"
+import { data } from "@/mocks/data"
+import * as C from "./styled"
 
-export const ReadBlog = () => {
+const ReadBlog = () => {
   const { blog } = data
   return (
     <>
@@ -18,5 +19,7 @@ export const ReadBlog = () => {
         </C.ReadBlogContainer>
       </C.ReadBlogFull>
     </>
-  );
-};
+  )
+}
+
+export default memo(ReadBlog)

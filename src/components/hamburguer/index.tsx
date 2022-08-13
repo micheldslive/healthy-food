@@ -2,12 +2,11 @@ import { useHealthyFood } from 'src/context'
 import { Burguer, Bullet } from './styled'
 
 export const Hamburguer = () => {
-  const { open, setOpen } = useHealthyFood()
+  const { option, setOption } = useHealthyFood()
 
-  console.log(open)
   return (
     <>
-      <Burguer open={open} onClick={() => setOpen(!open)}>
+      <Burguer open={option.menu} onClick={() => setOption({...option, menu: !option.menu})}>
         <Bullet />
         <Bullet />
         <Bullet />

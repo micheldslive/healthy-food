@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components'
-import { Variables } from './variables'
+import { createGlobalStyle } from "styled-components";
+import { Variables } from "./variables";
 
 export const GlobalStyles = createGlobalStyle`
 
@@ -181,4 +181,65 @@ export const GlobalStyles = createGlobalStyle`
     opacity: 0.6;
     cursor: not-allowed;
   }
-`
+
+  .react-modal-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+  }
+
+  .react-modal-content {
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--white);
+    padding: 1rem 2rem;
+    position: relative;
+    border-radius: 0.25rem;
+
+    @media (min-width: 2000px) {
+      max-width: 800px;
+    }
+
+    @media (max-width: 530px) {
+      width: 90%;
+    }
+
+    @media (max-width: 372px) {
+      padding: 2rem 1rem;
+    }
+  }
+
+  .react-modal-close {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    border: 0;
+    background: transparent;
+    transition: filter 0.2s;
+    &:hover {
+      filter: brightness(0.8);
+    }
+
+    @media (min-width: 2000px) {
+      img {
+          width: 30px;
+      }
+    }
+  }
+
+  .ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+  }
+
+  .ReactModal__Overlay--after-open {
+    opacity: 1;
+  }
+`;

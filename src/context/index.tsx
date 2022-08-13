@@ -1,26 +1,30 @@
-import { IChildren, IHealthyFoodContext } from '@/core/types'
-import { createContext, useContext, useState } from 'react'
+import { IChildren, IHealthyFoodContext, IModalRegister } from "@/core/types";
+import { createContext, useContext, useState } from "react";
 
-const defaultHealthyFood: IHealthyFoodContext = {
-  open: false,
-  setOpen: () => false,
+const defaultModalValues: IModalRegister = {
+  data: {}, menu: false, modal: false, loading: false
 }
 
-const HealthyFoodContext = createContext(defaultHealthyFood)
+const defaultHealthyFood: IHealthyFoodContext = {
+  option: defaultModalValues,
+  setOption: () => {},
+};
 
-export const useHealthyFood = () => useContext(HealthyFoodContext)
+const HealthyFoodContext = createContext(defaultHealthyFood);
+
+export const useHealthyFood = () => useContext(HealthyFoodContext);
 
 export const HealthyFoodProvider = ({ children }: IChildren) => {
-  const [open, setOpen] = useState<boolean>(false)
+  const [option, setOption] = useState<IModalRegister>(defaultModalValues);
 
   return (
     <HealthyFoodContext.Provider
       value={{
-        open,
-        setOpen,
+        option,
+        setOption
       }}
     >
       {children}
     </HealthyFoodContext.Provider>
-  )
-}
+  );
+};
