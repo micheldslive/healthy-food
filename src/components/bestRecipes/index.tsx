@@ -2,9 +2,7 @@ import { data } from "@/mocks/data"
 import { memo } from "react"
 import * as C from "./styled"
 
-
 const BestRecipes = () => {
-
   const { recipes } = data
 
   return (
@@ -13,14 +11,12 @@ const BestRecipes = () => {
         <C.BestRecipesContent>
           <C.Description>
             <C.Title>{recipes.title}</C.Title>
-            <C.SubTitle>
-              {recipes.desc}
-            </C.SubTitle>
+            <C.SubTitle>{recipes.desc}</C.SubTitle>
           </C.Description>
           <C.Recipes>
             <C.Unlist>
               {recipes.items.map(({ id, image, title, buttonText }) => (
-                <C.List key={id}>
+                <C.List key={id.toString()}>
                   <C.RecipesCard>
                     <C.Img src={image} />
                     <C.RecipesCardContainer>
