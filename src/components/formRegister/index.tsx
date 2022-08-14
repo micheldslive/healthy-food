@@ -4,7 +4,7 @@ import { SubmitHandler, useForm } from "react-hook-form"
 import InputMask from "react-input-mask"
 import { useHealthyFood } from "@/context"
 import { IRegister } from "@/core/types"
-import { HealthyFoodAPI } from "@/core/api/Api"
+import { HealthyFoodAPI } from "@/core/api"
 import Cookies from "universal-cookie"
 
 export const FormRegister = () => {
