@@ -13,21 +13,29 @@ export const HeaderFull = styled.header<IStyledHeader>`
 
 export const HeaderContainer = styled.section`
   ${FlexBox('center', 'space-between', '0')}
-  height: 5rem;
+  height: 6.25rem;
   padding: 0 2rem;
+
+  @media (max-width: 799px) {
+    height: 5rem;
+  }
+
 `
 
 export const HealthyLogo = styled.h1<IStyledHeader>`
   ${TextHealthy('', '', '32px', 'var(--bold)')}
   transition: 0.3s;
 
-  @media (min-width: 901px) {
-    color: ${({ scroll }) => (scroll ? 'var(--white)' : 'var(--green-2)')};
-  }
-
   @media (max-width: 900px) {
     font-size: 24px;
-    color: ${({ open }) => (open ? 'var(--green-2)' : 'var(--white)')};
+    background-color: var(--white);
+    padding: 0.8rem 1.6rem;
+    border-radius: 0.3rem;
+    color: var(--green-2);
+  }
+
+  @media (min-width: 901px) {
+    color: ${({ scroll }) => (scroll ? 'var(--white)' : 'var(--green-2)')};
   }
 `
 
