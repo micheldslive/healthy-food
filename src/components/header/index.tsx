@@ -34,7 +34,7 @@ export const Header = () => {
           </C.HealthyLogo>
         </C.Anchor>
         <C.Nav>
-          <C.UnlistContent open={option.menu}>
+          <C.UnlistContent open={option.menu} aria-label={String(option.menu)}>
             <C.UnList>
               {header.menu.map(({ id, go, title }) => (
                 <C.List key={id.toString()}>

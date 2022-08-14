@@ -1,14 +1,12 @@
-import { render, screen } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import BestRecipes from './index'
 
 describe('<BestRecipes />', () => {
-  it('should render link and children', () => {
-    render(<BestRecipes />)
+  it('should render a heading', () => {
+    const { getByRole } = render(<BestRecipes />)
 
-    // const children = screen.getByText(/anything/i)
-    const children = screen.getByRole('heading', { name: /Our Best Recipes/i })
+    const title = getByRole('heading', { name: /Our Best Recipes/i })
 
-    expect(children).toBeInTheDocument
-    //expect(children).toHaveAttribute('href', '/my-link')
+    expect(title).toBeInTheDocument
   })
 })

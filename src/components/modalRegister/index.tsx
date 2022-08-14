@@ -9,6 +9,8 @@ import { IRegister } from "@/core/types"
 import { HealthyFoodAPI } from "@/core/api/Api"
 import { useState } from "react"
 
+Modal.setAppElement("#root")
+
 export function ModalRegister() {
   const [loading, setLoading] = useState<boolean>(false)
   const { option, setOption } = useHealthyFood()
@@ -91,11 +93,11 @@ export function ModalRegister() {
           </div>
           <div>
             <label>CPF</label>
-            {/* <InputMask
+            <InputMask
               mask={"999.999.999-99"}
               placeholder="000.000.000-00"
               {...register("cpf", { required: true })}
-            /> */}
+            />
           </div>
           <div>
             <label>CEP</label>
