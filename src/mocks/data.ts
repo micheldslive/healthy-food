@@ -1,3 +1,17 @@
+import Comida1 from "@/assets/comida_1.svg"
+import Comida2 from "@/assets/comida_2.svg"
+import Comida3 from "@/assets/comida_3.svg"
+import Comida4 from "@/assets/comida_4.svg"
+
+import Post1 from "@/assets/blog_image_1.svg"
+import User1 from "@/assets/user1.svg"
+import Post2 from "@/assets/blog_image_2.svg"
+import User2 from "@/assets/user2.svg"
+import Post3 from "@/assets/blog_image_3.svg"
+import User3 from "@/assets/user3.svg"
+import Post4 from "@/assets/blog_image_4.svg"
+import User4 from "@/assets/user4.svg"
+
 export const data = {
   header: {
     logo: "Healthy Food",
@@ -30,25 +44,25 @@ export const data = {
     items: [
       {
         id: 1,
-        image: "assets/comida_1.svg",
+        image: Comida1,
         title: "Broccoli Salad with Bacon",
         buttonText: "See Recipe"
       },
       {
         id: 2,
-        image: "assets/comida_2.svg",
+        image: Comida2,
         title: "Classic Beef Burgers",
         buttonText: "See Recipe"
       },
       {
         id: 3,
-        image: "assets/comida_3.svg",
+        image: Comida3,
         title: "Classic Potato Salad",
         buttonText: "See Recipe"
       },
       {
         id: 4,
-        image: "assets/comida_4.svg",
+        image: Comida4,
         title: "Cherry Cobbler on the Grill",
         buttonText: "See Recipe"
       },
@@ -78,29 +92,29 @@ export const data = {
     posts: [
       {
         id: 1,
-        blogImage: 'assets/blog_image_1.svg',
-        userImage: 'assets/user1.svg',
+        blogImage: Post1,
+        userImage: User1,
         title: "Quick-start guide to nuts and seeds",
         name: "Kevin Ibrahim",
       },
       {
         id: 2,
-        blogImage: 'assets/blog_image_2.svg',
-        userImage: 'assets/user2.svg',
+        blogImage: Post2,
+        userImage: User2,
         title: "Nutrition: Tips for Improving Your Health",
         name: "Mike Jackson",
       },
       {
         id: 3,
-        blogImage: 'assets/blog_image_3.svg',
-        userImage: 'assets/user3.svg',
+        blogImage: Post3,
+        userImage: User3,
         title: "The top 10 benefits of eating healthy",
         name: "Bryan McGregor",
       },
       {
         id: 4,
-        blogImage: 'assets/blog_image_4.svg',
-        userImage: 'assets/user4.svg',
+        blogImage: Post4,
+        userImage: User4,
         title: "What Makes a Healthy Diet",
         name: "Jashua",
       },

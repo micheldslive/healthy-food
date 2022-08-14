@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import ServeYouImage from "@/assets/bloco_services.svg"
 import { BG, FlexBox } from "@/styles/mixins";
 
 export const ServeYouFull = styled.div`
-  ${BG('assets/bloco_services.svg', 'no-repeat', 'top left', 'contain', '45rem', 'relative')}
+  ${BG(ServeYouImage, 'no-repeat', 'top left', 'contain', '45rem', 'relative')}
 
   @media (max-width: 600px) {
     background-size: cover;

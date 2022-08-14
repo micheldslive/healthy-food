@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import { BG, FlexBox } from "@/styles/mixins";
+import JoinMemberImage from "@/assets/bloco_final_image.svg"
 
 export const JoinMemberFull = styled.div`
-  ${BG('assets/bloco_final_image.svg', 'no-repeat', 'top right', 'contain', '45rem', 'relative')}
+  ${BG(JoinMemberImage, 'no-repeat', 'top right', 'contain', '45rem', 'relative')}
 
   @media (max-width: 600px) {
     background-size: cover;

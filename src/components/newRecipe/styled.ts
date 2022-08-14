@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 import { FiSearch } from 'react-icons/fi'
+import NewRecipeImage from "@/assets/Illustration.svg"
 import { BG, FlexBox, TextHealthy } from '@/styles/mixins'
 
 export const NewRecipeFull = styled.div`
-  ${BG('assets/Illustration.svg', 'no-repeat', 'top right', 'contain', '40rem', 'relative')}
+  ${BG(NewRecipeImage, 'no-repeat', 'top right', 'contain', '40rem', 'relative')}
 
   @media (min-width: 1500px) and (max-width: 1919px) {
     height: 50rem;
