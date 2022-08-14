@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const ReadBlogFull = styled.div`
   overflow: hidden;
+  background-color: var(--grey-1);
 `;
 
 export const ReadBlogContainer = styled.section`
