@@ -35,10 +35,12 @@ Esse projeto foi desenvolvido com a seguinte tecnologia e suas dependencias:
     - react-modal
     - react-scroll
     - react-slick
+    - ts-config-paths
     - typescript
+    - styled components
+    - universal-cookie
     - docker
     - jest
-    - ts-config-paths
 
 
 ## Executando o projeto (Local)
@@ -73,6 +75,29 @@ docker compose up
 O servidor estará disponível no http://localhost:3000 em seu navegador
 
 ---
+
+
+## Demais comandos:
+
+#### Para Produção:
+
+```
+npm run build / yarn build
+```
+
+#### Para testes:
+
+```
+npm run test / yarn test
+
+```
+```
+npm run test:watch / yarn test:watch
+
+```
+
+---
+
 
 ## Desenvolvedor<br>
 <table>

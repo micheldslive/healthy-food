@@ -14,7 +14,7 @@ export const NewRecipeFull = styled.div`
     height: 60rem;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 660px) {
     background-size: cover;
   }
 `

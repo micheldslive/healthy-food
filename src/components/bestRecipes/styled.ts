@@ -3,6 +3,7 @@ import { FlexBox, TextHealthy } from "@/styles/utils/mixins";
 
 export const BestRecipesFull = styled.div`
   background: var(--grey-1);
+  margin-top: 24px;
 `;
 
 export const BestRecipesContainer = styled.section``;

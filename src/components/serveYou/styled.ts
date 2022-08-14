@@ -42,6 +42,10 @@ export const Paragraph = styled.p`
   margin: 2rem 0;
   max-width: 24rem;
   color: var(--grey-3);
+
+  @media (max-width: 900px) {
+    color: var(--black);
+  }
 `;
 
 export const Anchor = styled.a`
