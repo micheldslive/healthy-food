@@ -8,9 +8,6 @@ import Footer from '@/components/footer'
 import { ModalContent } from '@/components/modal'
 import { FormRegister } from '@/components/formRegister'
 import { Toast } from '@/components/Toast'
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
-import 'react-toastify/dist/ReactToastify.min.css';
 
 const Home = () => {
   return (
