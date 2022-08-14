@@ -180,7 +180,7 @@ const config = {
   transform: {
     '^.+\\.tsx?$': 'ts-jest',
     [assetsKey]: 'ts-jest',
-    '\\.svg$': 'ts-jest',
+    '\\.svg$': '<rootDir>/src/mocks/svgTransform.ts',
   },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation

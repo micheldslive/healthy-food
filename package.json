@@ -52,7 +52,6 @@
     "vite": "2.9.1",
     "vite-plugin-lint": "1.0.1",
     "vite-plugin-linter": "1.2.0",
-    "vite-plugin-svgr": "^2.2.1",
     "vite-tsconfig-paths": "3.4.1"
   },
   "devDependencies": {
@@ -65,7 +64,6 @@
     "@types/react-slick": "^0.23.10",
     "@types/styled-components": "^5.1.26",
     "@typescript-eslint/eslint-plugin": "^5.33.0",
-    "@typescript-eslint/parser": "^5.33.0",
-    "mq-polyfill": "^1.1.8"
+    "@typescript-eslint/parser": "^5.33.0"
   }
 }
