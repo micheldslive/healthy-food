@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import * as C from "./styled";
 
-import leftArrow from "assets/left-arrow.svg";
+import leftArrow from "@/assets/left-arrow.svg";
 import { data } from "@/mocks/data";
 import { ISlickArrow } from "@/core/types";
 

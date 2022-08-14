@@ -1,7 +1,7 @@
 import { Form, IconSpin } from "./styled"
 import { toast } from "react-toastify"
 import Modal from "react-modal"
-import closeImg from "assets/close.svg"
+import closeImg from "@/assets/close.svg"
 import { useForm } from "react-hook-form"
 import InputMask from "react-input-mask"
 import { useHealthyFood } from "@/context"
