@@ -30,8 +30,6 @@ export function ModalRegister() {
         reset()
       }, 2000)
 
-      console.log(timer)
-
       return () => clearTimeout(timer)
     } catch (error) {
       console.error(error)
@@ -42,10 +40,7 @@ export function ModalRegister() {
     const { AddressingCep } = HealthyFoodAPI()
     try {
       const response = await AddressingCep(cep)
-      if (response?.erro) {
-        toast.error("Invalid CEP, enter a valid CEP")
-        return
-      }
+      if (response?.erro) return
 
       const { logradouro, complemento, bairro, localidade } = response
       setValue("logradouro", logradouro)
