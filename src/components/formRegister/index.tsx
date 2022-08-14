@@ -6,6 +6,7 @@ import { useHealthyFood } from "@/context"
 import { IRegister } from "@/core/types"
 import { HealthyFoodAPI } from "@/core/api"
 import Cookies from "universal-cookie"
+import { LocalStorage } from "@/core/localStorage"
 
 export const FormRegister = () => {
   const { option, setOption } = useHealthyFood()
@@ -13,17 +14,22 @@ export const FormRegister = () => {
 
   const onSubmit: SubmitHandler<IRegister> = async (data) => {
     try {
+      const key = `healthyFood_${data.cpf}`
       const cookies = new Cookies()
+      const local = new LocalStorage()
+
       setOption({ ...option, loading: true })
 
       await new Promise((resolve) => setTimeout(resolve, 2000)).then(() => {
-        localStorage.setItem(`healthyFood_${data.cpf}`, JSON.stringify(data))
-        cookies.set(`healthyFood_${data.cpf}`, JSON.stringify(data))
-
-        toast.success(`User ${data.name} registered successfully`)
+        local.set(key, JSON.stringify(data))
+        cookies.set(key, JSON.stringify(data))
+        
         setOption({ ...option, data, modal: false, loading: false })
         reset()
       })
+      
+      const getLocal = local.get(key)
+      toast.success(`Welcome ${getLocal?.name}, you have successfully registered`)
     } catch (error) {
       console.error(error)
     }
@@ -147,7 +153,7 @@ export const FormRegister = () => {
       </div>
 
       <button type="submit" disabled={option.loading}>
-        {option.loading ? <IconSpin /> : ""}
+        {option.loading && <IconSpin />}
         Register
       </button>
     </Form>

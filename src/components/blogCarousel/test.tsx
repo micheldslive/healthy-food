@@ -1,4 +1,4 @@
-import "@/matchMedia.mock"
+import "@/mocks/matchMedia.ts"
 import { render } from "@testing-library/react"
 import { BlogCarousel } from "./index"
 
