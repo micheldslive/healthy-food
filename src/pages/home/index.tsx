@@ -5,7 +5,8 @@ import ServeYou from '@/components/serveYou'
 import ReadBlog from '@/components/blog'
 import JoinMember from '@/components/joinMember'
 import Footer from '@/components/footer'
-import { ModalRegister } from '@/components/modalRegister'
+import { ModalContent } from '@/components/modal'
+import { FormRegister } from '@/components/formRegister'
 import { Toast } from '@/components/Toast'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
@@ -20,7 +21,9 @@ const Home = () => {
       <ServeYou />
       <ReadBlog />
       <JoinMember />
-      <ModalRegister />
+      <ModalContent>
+        <FormRegister />
+      </ModalContent>
       <Toast />
       <Footer />
     </>

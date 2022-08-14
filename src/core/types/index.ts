@@ -11,6 +11,7 @@ export interface IHealthyFoodContext {
 export interface IModalRegister {
   menu: boolean
   modal: boolean
+  loading: boolean
   data: IRegister
 }
 

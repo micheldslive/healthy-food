@@ -2,7 +2,7 @@ import { IChildren, IHealthyFoodContext, IModalRegister } from "@/core/types";
 import { createContext, useContext, useState } from "react";
 
 const defaultModalValues: IModalRegister = {
-  menu: false, modal: false, data: {}
+  menu: false, modal: false, loading: false, data: {}
 }
 
 const defaultHealthyFood: IHealthyFoodContext = {

@@ -1,5 +1,5 @@
 import { IStyledHeader } from '@/core/types'
-import { FlexBox, Position } from '@/styles/mixins'
+import { FlexBox, Position } from '@/styles/utils/mixins'
 import styled from 'styled-components'
 
 export const Bullet = styled.div``

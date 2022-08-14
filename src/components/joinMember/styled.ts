@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { BG, FlexBox } from "@/styles/mixins";
+import { BG, FlexBox } from "@/styles/utils/mixins";
 import JoinMemberImage from "@/assets/bloco_final_image.svg"
 
 export const JoinMemberFull = styled.div`

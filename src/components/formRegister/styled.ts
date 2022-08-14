@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { CgSpinner } from "react-icons/cg";
-import { FlexBox, TextHealthy } from "@/styles/mixins";
+import { FlexBox, TextHealthy } from "@/styles/utils/mixins";
 
 export const Form = styled.form`
   text-align: center;
@@ -18,9 +18,21 @@ export const Form = styled.form`
     }
   }
 
-  .otherDatas {
+  .formColumns {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 0.4rem;
+    text-align: left;
+    margin: 0.5rem 0;
+
+    label {
+      margin-left: 0.5rem;
+    }
+  }
+
+  .addressColumn {
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 0.4rem;
     text-align: left;
     margin: 0.5rem 0;

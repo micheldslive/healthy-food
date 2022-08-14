@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FlexBox } from "@/styles/mixins";
+import { FlexBox } from "@/styles/utils/mixins";
 
 export const Card = styled.a`
   margin: 3rem 0 5rem 0rem;

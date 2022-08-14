@@ -3,6 +3,7 @@ import { data } from "@/mocks/data"
 import { Hamburguer } from "@/components/hamburguer"
 import * as C from "./styled"
 import { useHealthyFood } from "@/context"
+import { Menu } from "@/components/menu"
 
 export const Header = () => {
   const [scroll, setScroll] = useState<boolean>(false)
@@ -33,33 +34,7 @@ export const Header = () => {
             {header.logo}
           </C.HealthyLogo>
         </C.Anchor>
-        <C.Nav>
-          <C.UnlistContent open={option.menu} aria-label={String(option.menu)}>
-            <C.UnList>
-              {header.menu.map(({ id, go, title }) => (
-                <C.List key={id.toString()}>
-                  <C.Anchor
-                    onClick={() => setOption({ ...option, menu: !option.menu })}
-                    to={go}
-                    spy
-                    smooth
-                  >
-                    {title}
-                  </C.Anchor>
-                </C.List>
-              ))}
-              <C.List>
-                <C.RegisterAnchor
-                  onClick={() =>
-                    setOption({ ...option, menu: false, modal: true })
-                  }
-                >
-                  {header.register}
-                </C.RegisterAnchor>
-              </C.List>
-            </C.UnList>
-          </C.UnlistContent>
-        </C.Nav>
+        <Menu />
         <Hamburguer />
       </C.HeaderContainer>
     </C.HeaderFull>

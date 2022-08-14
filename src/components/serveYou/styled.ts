@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import ServeYouImage from "@/assets/bloco_services.svg"
-import { BG, FlexBox } from "@/styles/mixins";
+import { BG, FlexBox } from "@/styles/utils/mixins";
 
 export const ServeYouFull = styled.div`
   ${BG(ServeYouImage, 'no-repeat', 'top left', 'contain', '45rem', 'relative')}

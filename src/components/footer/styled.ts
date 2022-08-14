@@ -1,4 +1,4 @@
-import { FlexBox } from '@/styles/mixins'
+import { FlexBox } from '@/styles/utils/mixins'
 import styled from 'styled-components'
 
 export const FooterFull = styled.footer``
