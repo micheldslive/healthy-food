@@ -44,7 +44,7 @@ export const data = {
     items: [
       {
         id: 1,
-        image: String(Comida1),
+        image: Comida1,
         title: "Broccoli Salad with Bacon",
         buttonText: "See Recipe"
       },
@@ -92,29 +92,29 @@ export const data = {
     posts: [
       {
         id: 1,
-        blogImage: String(Post1),
-        userImage: String(User1),
+        blogImage: Post1,
+        userImage: User1,
         title: "Quick-start guide to nuts and seeds",
         name: "Kevin Ibrahim",
       },
       {
         id: 2,
-        blogImage: String(Post2),
-        userImage: String(User2),
+        blogImage: Post2,
+        userImage: User2,
         title: "Nutrition: Tips for Improving Your Health",
         name: "Mike Jackson",
       },
       {
         id: 3,
-        blogImage: String(Post3),
-        userImage: String(User3),
+        blogImage: Post3,
+        userImage: User3,
         title: "The top 10 benefits of eating healthy",
         name: "Bryan McGregor",
       },
       {
         id: 4,
-        blogImage: String(Post4),
-        userImage: String(User4),
+        blogImage: Post4,
+        userImage: User4,
         title: "What Makes a Healthy Diet",
         name: "Jashua",
       },
