@@ -1,5 +1,5 @@
-import { memo } from 'react'
-import * as C from './styled'
+import { memo } from "react"
+import * as C from "./styled"
 
 const Footer = () => {
   return (

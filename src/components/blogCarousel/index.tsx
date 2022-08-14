@@ -38,12 +38,12 @@ export const BlogCarousel = () => {
   return (
     <Slider {...settings}>
       {blog.posts.map(({ id, blogImage, title, userImage, name }) =>
-        <C.Card key={id}>
-          <C.CardImage src={blogImage} />
+        <C.Card key={id.toString()}>
+          <C.CardImage src={blogImage} aria-label="cardImage" />
           <C.CardDescription>
             <C.CardTitleText>{title}</C.CardTitleText>
             <C.CardPeople>
-              <C.CardPeopleImage src={userImage} alt={name} />
+              <C.CardPeopleImage src={userImage} alt={name} aria-label="userImage" />
               <C.CardPeopleTitle>{name}</C.CardPeopleTitle>
             </C.CardPeople>
           </C.CardDescription>

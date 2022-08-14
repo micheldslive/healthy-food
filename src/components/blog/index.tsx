@@ -10,9 +10,7 @@ const ReadBlog = () => {
       <C.ReadBlogFull id="blog">
         <C.ReadBlogContainer>
           <C.Title>{blog.title}</C.Title>
-          <C.Subtitle>
-            {blog.desc}
-          </C.Subtitle>
+          <C.Subtitle>{blog.desc}</C.Subtitle>
           <C.CardContainer>
             <BlogCarousel />
           </C.CardContainer>

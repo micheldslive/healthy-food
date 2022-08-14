@@ -4,8 +4,10 @@ import styled from 'styled-components'
 
 export const Bullet = styled.div``
 
-export const Burguer = styled.div<IStyledHeader>`
+export const Burguer = styled.button<IStyledHeader>`
   ${Position('fixed', '1.5rem', '1.5rem', '', '')}
+  background: none;
+  border: none;
   width: 2rem;
   height: 2rem;
   z-index: 20;

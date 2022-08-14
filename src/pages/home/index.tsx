@@ -7,7 +7,9 @@ import JoinMember from '@/components/joinMember'
 import Footer from '@/components/footer'
 import { ModalRegister } from '@/components/modalRegister'
 import { Toast } from '@/components/Toast'
-import 'react-toastify/dist/ReactToastify.css'
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import 'react-toastify/dist/ReactToastify.min.css';
 
 const Home = () => {
   return (

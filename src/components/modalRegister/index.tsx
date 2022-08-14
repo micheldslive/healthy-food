@@ -9,8 +9,6 @@ import { IRegister } from "@/core/types"
 import { HealthyFoodAPI } from "@/core/api/Api"
 import { useState } from "react"
 
-Modal.setAppElement("#root")
-
 export function ModalRegister() {
   const [loading, setLoading] = useState<boolean>(false)
   const { option, setOption } = useHealthyFood()
@@ -19,7 +17,7 @@ export function ModalRegister() {
   const onSubmit = async (data: IRegister) => {
     try {
       setLoading(true)
-      await localStorage.setItem(`healthyFood_${data.cpf}`,JSON.stringify(data))
+      await localStorage.setItem(`healthyFood_${data.cpf}`, JSON.stringify(data))
       document.cookie = `healthyFood_${data.cpf}=${JSON.stringify(data)}`
       setOption({ ...option, data: data })
 
@@ -29,6 +27,9 @@ export function ModalRegister() {
         setLoading(false)
         reset()
       }, 2000)
+
+      console.log(timer)
+
       return () => clearTimeout(timer)
     } catch (error) {
       console.error(error)
@@ -50,7 +51,6 @@ export function ModalRegister() {
       setValue("bairro", bairro)
       setValue("localidade", localidade)
       setValue("uf", response.uf)
-
     } catch (error) {
       console.error(error)
     }
@@ -87,19 +87,15 @@ export function ModalRegister() {
         <div className="otherDatas">
           <div>
             <label>Birthday</label>
-            <input
-              type="date"
-              required={true}
-              {...register("birthday")}
-            />
+            <input type="date" required={true} {...register("birthday")} />
           </div>
           <div>
             <label>CPF</label>
-            <InputMask
+            {/* <InputMask
               mask={"999.999.999-99"}
               placeholder="000.000.000-00"
               {...register("cpf", { required: true })}
-            />
+            /> */}
           </div>
           <div>
             <label>CEP</label>
@@ -110,7 +106,9 @@ export function ModalRegister() {
               {...register("cep", {
                 onBlur: (event) => getAddress(event.target.value),
               })}
-            />
+              >
+                {<input type="text" />}
+              </InputMask>
           </div>
           <div>
             <label>Number</label>
@@ -157,7 +155,7 @@ export function ModalRegister() {
         </div>
 
         <button type="submit" disabled={loading}>
-          {loading? <IconSpin /> : ""}
+          {loading ? <IconSpin /> : ""}
           Register
         </button>
       </Form>
