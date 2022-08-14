@@ -5,10 +5,10 @@ export interface IChildren {
 }
 
 export interface IHealthyFoodContext {
-  option: IModalRegister
-  setOption: React.Dispatch<React.SetStateAction<IModalRegister>>
+  option: IOptions
+  setOption: React.Dispatch<React.SetStateAction<IOptions>>
 }
-export interface IModalRegister {
+export interface IOptions {
   menu: boolean
   modal: boolean
   loading: boolean
@@ -39,4 +39,9 @@ export interface IRegister {
 
 export interface IErrorHandler {
   errorHandler(promise: Promise<unknown>): Promise<unknown>
+}
+
+export interface ILocalStorage {
+  get(key: string): IRegister | null
+  set(key: string, data: string): void
 }

@@ -1,11 +1,11 @@
 <h1 align="center">
-  📰 HEALTHY FOOD CHALLENGE
+  🍓 HEALTHY FOOD CHALLENGE
 </h1>
 
 <p align="center">
-  <img alt="ToDoList" src="https://img.shields.io/static/v1?label=todo&message=list&color=success&labelColor=grey">
+  <img alt="healthyfood" src="https://img.shields.io/static/v1?label=healthy&message=food&color=success&labelColor=grey">
   
-  <img alt="Next" src="https://img.shields.io/static/v1?label=stack&message=nextjs&color=success&labelColor=grey">
+  <img alt="vite" src="https://img.shields.io/static/v1?label=stack&message=vitejs&color=success&labelColor=grey">
   
   <img alt="Portfolio" src="https://img.shields.io/static/v1?label=portfolio&message=MICODE&color=success&labelColor=grey">
 </p>
@@ -15,7 +15,7 @@
 ## Projeto
 
 <p align="center">
-  <img src="https://github.com/micheldslive/todo-list-challenge/blob/main/demo/demo.gif">
+  <img src="https://github.com/micheldslive/healthy-food/blob/main/demo/demo.gif">
 </p>
 
 <h4 align="center"><a href="https://healthy-food-micode.vercel.app/">Clique aqui para ver o projeto.</a></h4>
@@ -97,7 +97,6 @@ npm run test:watch / yarn test:watch
 ```
 
 ---
-
 
 ## Desenvolvedor<br>
 <table>
