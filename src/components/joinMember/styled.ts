@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { BG, FlexBox } from "@/styles/utils/mixins";
+import { BG, FlexBox, homeInput } from "@/styles/utils/mixins";
 import JoinMemberImage from "@/assets/bloco_final_image.svg"
 
 export const JoinMemberFull = styled.div`
@@ -17,6 +17,8 @@ export const JoinMemberContainer = styled.section`
 
 export const JoinMemberContent = styled.div`
   padding: 2rem;
+  width: 100%;
+  max-width: 31.5rem;
 
   @media (max-width: 900px) {
     background: rgba(255, 255, 255, 0.2);
@@ -33,7 +35,7 @@ export const JoinMemberContent = styled.div`
 
 export const Title = styled.h1`
   color: var(--blue-1);
-  max-width: 22rem;
+  max-width: 25rem;
 `;
 
 export const Div = styled.div`
@@ -42,19 +44,15 @@ export const Div = styled.div`
 `;
 
 export const Input = styled.input`
-  padding: 1rem;
-  width: 100%;
-  max-width: 20rem;
-  margin-right: 1rem;
-  border-radius: 0.3rem;
+  ${homeInput('25rem')}
 `;
 
 export const Button = styled.button`
-  padding: 1rem 1.6rem;
+  padding: 1rem 2rem;
   border-radius: 0.3rem;
   border: none;
   color: var(--white);
-  background: var(--green-2);
+  background: var(--green-1);
   transition: 0.3s;
 
   &:hover {

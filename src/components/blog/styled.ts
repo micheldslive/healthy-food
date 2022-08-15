@@ -3,11 +3,12 @@ import styled from "styled-components";
 export const ReadBlogFull = styled.div`
   overflow: hidden;
   background-color: var(--grey-1);
+  padding-bottom: 4rem;
 `;
 
 export const ReadBlogContainer = styled.section`
   max-width: 83%;
-  margin-top: 6rem;
+  margin-top: 4rem;
   text-align: center;
 `;
 

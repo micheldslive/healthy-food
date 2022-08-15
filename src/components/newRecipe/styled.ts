@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { FiSearch } from 'react-icons/fi'
-import { BG, FlexBox, TextHealthy } from '@/styles/utils/mixins'
+import { BG, homeInput, FlexBox, TextHealthy } from '@/styles/utils/mixins'
 import newRecipeImage from "@/assets/Illustration.svg"
 
 export const NewRecipeFull = styled.div`
@@ -26,8 +26,7 @@ export const NewRecipeContainer = styled.section`
 
 export const NewRecipeContent = styled.div`
   ${FlexBox('', 'center', 'column')}
-  height: 20rem;
-  padding: 0 2rem;
+  padding: 2rem;
   max-width: 30rem;
   width: 100%;
   border-radius: 0.5rem;
@@ -40,11 +39,16 @@ export const NewRecipeContent = styled.div`
   }
 `
 
-export const Div = styled.div``
+export const Div = styled.div`
+  width: 100%;
+  max-width: 30rem;
+
+`
 
 export const Title = styled.h1`
-  ${TextHealthy('var(--blue-2)', '', '3rem')}
-  max-width: 20rem;
+  ${TextHealthy('var(--blue-2)', '', '3rem', '', '70px')}
+  max-width: 22rem;
+
 `
 
 export const DivInputButton = styled.div`
@@ -53,19 +57,15 @@ export const DivInputButton = styled.div`
 `
 
 export const Input = styled.input`
-  padding: 1rem;
-  width: 100%;
-  max-width: 25rem;
-  margin-right: 1rem;
-  border-radius: 0.3rem;
+  ${homeInput('25rem')}
 `
 
 export const Button = styled.button`
-  padding: 1rem;
+  padding: 0.9rem 1.1rem;
   border-radius: 0.3rem;
   border: none;
   color: var(--white);
-  background: var(--green-2);
+  background: var(--green-1);
   transition: 0.3s;
 
   &:hover {
@@ -74,5 +74,5 @@ export const Button = styled.button`
 `
 
 export const Icon = styled(FiSearch)`
-  ${TextHealthy('', '', '16px')}
+  ${TextHealthy('', '', '18px')}
 `

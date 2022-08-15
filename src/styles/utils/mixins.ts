@@ -69,3 +69,17 @@ export const BG = (
   height: ${height};
   position: ${position};
 `
+
+export const homeInput = (maxWidth: string) => css`
+  padding: 0.9rem 1.5rem;
+  width: 100%;
+  max-width: ${maxWidth};
+  margin-right: 1rem;
+  border-radius: 0.3rem;
+  border: 1px solid var(--grey-5);
+
+  &::placeholder {
+    color: var(--grey-4);
+  }
+  
+`

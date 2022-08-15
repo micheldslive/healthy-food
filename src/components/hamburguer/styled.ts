@@ -23,7 +23,7 @@ export const Burguer = styled.button<IStyledHeader>`
   div {
     width: 2rem;
     height: 0.15rem;
-    background: ${({ open }) => (open ? 'var(--green-2);' : 'var(--white)')};
+    background: ${({ open }) => (open ? 'var(--green-1);' : 'var(--white)')};
     border-radius: 0.8rem;
     transform-origin: 1px;
     transition: all 0.3s linear;

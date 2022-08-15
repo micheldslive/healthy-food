@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 export const HeaderFull = styled.header<IStyledHeader>`
   ${Position('fixed', '0')}
-  background-color: ${({ scroll }) => (scroll ? 'var(--green-2)' : '')};
+  background-color: ${({ scroll }) => (scroll ? 'var(--green-1)' : '')};
   width: 100%;
   z-index: 2;
   transition: 0.3s;
@@ -31,11 +31,11 @@ export const HealthyLogo = styled.h1<IStyledHeader>`
     background-color: var(--white);
     padding: 0.8rem 1.6rem;
     border-radius: 0.3rem;
-    color: var(--green-2);
+    color: var(--green-1);
   }
 
   @media (min-width: 901px) {
-    color: ${({ scroll }) => (scroll ? 'var(--white)' : 'var(--green-2)')};
+    color: ${({ scroll }) => (scroll ? 'var(--white)' : 'var(--green-1)')};
   }
 `
 
