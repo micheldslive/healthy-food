@@ -11,9 +11,16 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    font-size: 1rem;
   }
 
   html {
+    scroll-behavior: smooth;
+    box-sizing: inherit;
+    width: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: var(--black);
+
     @media (max-width: 1080px) {
       font-size: 93.75%;
     }
@@ -22,23 +29,12 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
-  html {
-    scroll-behavior: smooth;
-    box-sizing: inherit;
-    width: 100%;
-  }
-
-  html {
-    scrollbar-width: thin;
-    scrollbar-color: var(--black);
-  }
-
   body::-webkit-scrollbar {
     width: 6px;
   }
 
   body::-webkit-scrollbar-thumb {
-    background-color: var(--green-2);
+    background-color: var(--green-1);
     border-radius: 10px;
   }
 
@@ -73,12 +69,7 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0 auto;
   }
 
-  @media (max-width: 1079px) {
-    padding: 0 20px;
-  }
-
-  button,
-  a {
+  button, a {
     cursor: pointer;
   }
 
@@ -175,11 +166,6 @@ export const GlobalStyles = createGlobalStyle`
 
   #blog .slick-slider .slick-prev {
     visibility: hidden;
-  }
-
-  [disabled] {
-    opacity: 0.6;
-    cursor: not-allowed;
   }
 
   .react-modal-overlay {

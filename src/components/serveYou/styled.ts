@@ -51,12 +51,12 @@ export const Paragraph = styled.p`
 export const Anchor = styled.a`
   display: inline-block;
   margin-top: 1rem;
-  padding: 0.8rem 1.8rem;
+  padding: 1rem 1.8rem;
   border-radius: 0.3rem;
-  background-color: var(--green-2);
+  background-color: var(--green-1);
   color: var(--white);
   transition: 0.3s;
-  box-shadow: 0 5px 20px var(--green-2);
+  box-shadow: 0 5px 20px rgba(186, 220, 88, 0.6);
 
   &:hover {
     filter: brightness(0.9);

@@ -6,10 +6,11 @@ export const BestRecipesFull = styled.div`
   margin-top: 24px;
 `;
 
-export const BestRecipesContainer = styled.section``;
+export const BestRecipesContainer = styled.section`
+  padding: 4rem 0 6rem;
+`;
 
 export const BestRecipesContent = styled.div`
-  padding: 5rem 0;
 `;
 
 export const Description = styled.div`
@@ -46,7 +47,7 @@ export const List = styled.li`
   background: white;
   border-radius: 0.3rem;
   max-width: 530px;
-  box-shadow: 0 0.9rem 1.1rem var(--grey-3);
+  box-shadow: 0 0.9rem 1.5rem rgba(0, 0, 0, 0.1);
 
   @media screen and (min-width: 977px) {
     &:nth-child(1n) {
@@ -91,6 +92,7 @@ export const Img = styled.img`
 
 export const RecipesCardContainer = styled.div`
   padding: 1.4rem 1.8rem;
+  ${FlexBox('baseline', '', 'column')}
 
   @media (max-width: 420px) {
     width: 100%;
@@ -105,9 +107,9 @@ export const H2 = styled.h2`
 
 export const Button = styled.a`
   ${TextHealthy('var(--white)', '', '', 'var(--normal)')}
-  padding: 0.8rem 1.2rem;
+  padding: 0.9rem 1.6rem;
   border-radius: 0.5rem;
-  background-color: var(--green-2);
+  background-color: var(--green-1);
   transition: 0.3s;
 
   &:hover {

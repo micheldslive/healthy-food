@@ -30,7 +30,7 @@ export const List = styled.li`
   ${TextHealthy('var(--white)', 'Mulish', '1rem', 'var(--bold)')}
 
   @media (max-width: 799px) {
-    ${TextHealthy('var(--green-2)')}
+    ${TextHealthy('var(--green-1)')}
   }
 `
 
@@ -40,10 +40,10 @@ export const RegisterAnchor = styled.a`
   border-radius: 0.3rem;
   border: 2px solid var(--white);
   background: var(--white);
-  ${TextHealthy('var(--green-2)', '', '', 'var(--bold)')}
+  ${TextHealthy('var(--green-1)', '', '', 'var(--bold)')}
 
   @media (max-width: 799px) {
-    background: var(--green-2);
+    background: var(--green-1);
     color: var(--white);
   }
   

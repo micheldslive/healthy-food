@@ -11,8 +11,9 @@ export const Variables = css`
     --grey-2: #dadada;
     --grey-3: #bcbcbc;
     --grey-4: #9e9baf;
-    --green-1: #707070;
-    --green-2: #badc58;
+    --grey-5: #707070;
+    --grey-6: #d7d7d7;
+    --green-1: #badc58;
     --blue-1: #2d3561;
     --blue-2: #1d164d;
     //Weights
