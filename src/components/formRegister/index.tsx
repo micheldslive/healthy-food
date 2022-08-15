@@ -10,7 +10,7 @@ import { LocalStorage } from "@/core/localStorage"
 
 export const FormRegister = () => {
   const { option, setOption } = useHealthyFood()
-  const { register, handleSubmit, setValue, reset } = useForm()
+  const { register, handleSubmit, setValue, reset } = useForm<IRegister>()
 
   const onSubmit: SubmitHandler<IRegister> = async (data) => {
     try {
@@ -38,15 +38,16 @@ export const FormRegister = () => {
   const getAddress = async (cep: string) => {
     const { AddressingCep } = HealthyFoodAPI()
     try {
+      setValue("cep", cep)
       const response = await AddressingCep(cep)
-      if (response?.erro) return
+      if (!response) return
 
-      const { logradouro, complemento, bairro, localidade } = response
+      const { logradouro, complemento, bairro, localidade, uf } = response
       setValue("logradouro", logradouro)
       setValue("complemento", complemento)
       setValue("bairro", bairro)
       setValue("localidade", localidade)
-      setValue("uf", response.uf)
+      setValue("uf", uf)
     } catch (error) {
       console.error(error)
     }

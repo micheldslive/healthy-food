@@ -34,7 +34,16 @@ export interface ISlickProps {
 }
 
 export interface IRegister {
-  [key: string]: string
+  name: string
+  cpf: string
+  birthday: string
+  cep: string
+  number: string
+  logradouro: string
+  complemento: string
+  bairro: string
+  localidade: string
+  uf: string
 }
 
 export interface IErrorHandler {
